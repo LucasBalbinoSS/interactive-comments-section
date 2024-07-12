@@ -1,0 +1,9 @@
+body {
+  background-color: var(--gray-100);
+  font-family: "Open Sans";
+  padding: 20px;
+}
+
+button {
+  font-family: "Open Sans";
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --blue-500: #5457b6;
+  --blue-900: #324152;
+
+  --red-100: #ffb8bb;
+  --red-500: #ed6468;
+
+  --white: #fff;
+  --gray-100: #f5f6fa;
+  --gray-200: #eaecf1;
+  --gray-300: #c3c4ef;
+  --gray-500: #67727e;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+}
