@@ -4,12 +4,12 @@ textarea {
 }
 
 textarea::-webkit-scrollbar {
-  width: 10px; /* Largura da barra */
-  background-color: #eee; /* Cor da trilha */
+  width: 10px;
+  background-color: #eee;
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* Cor do indicador */
+  background-color: #ccc;
 }
 
 .input {
