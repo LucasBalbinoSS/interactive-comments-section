@@ -1,29 +1,19 @@
-import "./Reply.css";
-
-export default function Reply() {
+export default function Reply(props) {
   return (
-    <li className="comment-container">
+    <li className="comment-container" key={props.id}>
       <div className="comment">
         <div className="information">
-          <img
-            className="photo"
-            src="../../images/avatars/image-ramsesmiron.webp"
-            alt="Teste"
-          />
-          <span className="user">ramsesmiron</span>
-          <span className="date">1 week ago</span>
+          <img className="photo" src={props.url} alt={props.alt} />
+          <span className="user">{props.user}</span>
+          <span className="date">{props.date}</span>
         </div>
-        <p className="text-content">
-          @maxblagun If you're still new, I'd recommend focusing on the
-          fundamentals of HTML, CSS, and JS before considering React. It's very
-          tempting to jump ahead but lay a solid foundation first.
-        </p>
+        <p className="text-content">{props.content}</p>
         <div className="comment-interaction">
           <div className="likes">
             <button className="button button-like">
               <img src="../../images/icon-plus.svg" alt="Plus icon" />
             </button>
-            <span className="likes-num">2</span>
+            <span className="likes-num">{props.likes}</span>
             <button className="button button-minus">
               <img src="../../images/icon-minus.svg" alt="Plus icon" />
             </button>
