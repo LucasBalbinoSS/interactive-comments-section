@@ -2,7 +2,7 @@ header {
   background-color: var(--white);
   border-bottom: 1px solid var(--gray-100);
   padding-inline: 20px;
-  padding-block: 8px;
+  padding-block: 12px;
   position: fixed;
   inset: 0 0 auto 0;
 }

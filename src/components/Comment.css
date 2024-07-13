@@ -1,5 +1,5 @@
 .comments-list {
-  margin-top: 44px;
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -29,11 +29,17 @@
 }
 
 .photo {
+  cursor: pointer;
   height: 25px;
 }
 
 .user {
+  cursor: pointer;
   font-weight: 700;
+}
+
+.user:hover {
+  text-decoration: underline;
 }
 
 .date {
@@ -64,14 +70,12 @@
 .button {
   background-color: transparent;
   border: none;
-  cursor: pointer;
   display: flex;
   padding: 12px;
 }
 
 .button-reply {
   align-items: center;
-  cursor: pointer;
   display: flex;
   font-size: var(--text-sm);
   gap: 5px;
