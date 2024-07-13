@@ -7,7 +7,7 @@ body {
 button {
   cursor: pointer;
   font-family: "Lato";
-  font-size: 14px;
+  font-size: var(--text-sm);
   transition: opacity 300ms ease;
 }
 
