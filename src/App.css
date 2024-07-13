@@ -5,6 +5,7 @@ body {
 }
 
 button {
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   font-family: "Lato";
@@ -17,5 +18,5 @@ button:hover {
 }
 
 button:focus {
-  outline: 2px solid #5473b6;
+  outline: 1px solid #5473b6;
 }

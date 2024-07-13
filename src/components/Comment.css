@@ -69,7 +69,6 @@
 
 .button {
   background-color: transparent;
-  border: none;
   display: flex;
   padding: 12px;
 }

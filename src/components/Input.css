@@ -48,7 +48,6 @@ textarea::-webkit-scrollbar-thumb {
 
 .send-button {
   background-color: var(--blue-500);
-  border: none;
   border-radius: 5px;
   color: var(--white);
   font-weight: 600;
