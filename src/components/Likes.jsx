@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./Likes.css";
+
 export default function Likes() {
   const [likes, setLikes] = useState(function () {
     return 0;

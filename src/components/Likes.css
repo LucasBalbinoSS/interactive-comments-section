@@ -1,0 +1,7 @@
+.likes {
+  align-items: center;
+  background-color: var(--gray-100);
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
