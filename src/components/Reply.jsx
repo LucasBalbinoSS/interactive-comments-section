@@ -1,6 +1,6 @@
 import Likes from "./Likes";
 
-export default function Reply(props) {
+const Reply = (props) => {
   return (
     <li className="comment-container" key={props.id}>
       <div className="comment">
@@ -21,3 +21,5 @@ export default function Reply(props) {
     </li>
   );
 }
+
+export default Reply

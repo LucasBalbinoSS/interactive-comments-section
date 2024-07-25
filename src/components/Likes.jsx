@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./Likes.css";
 
-export default function Likes() {
+const Likes = () => {
   const [likes, setLikes] = useState(function () {
     return 0;
   });
@@ -29,3 +29,5 @@ export default function Likes() {
     </div>
   );
 }
+
+export default Likes

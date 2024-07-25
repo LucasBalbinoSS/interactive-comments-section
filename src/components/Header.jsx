@@ -1,9 +1,11 @@
 import "./Header.css";
 
-export default function Header() {
+const Header = () => {
   return (
     <header>
       <span className="logo">LinkUp</span>
     </header>
   );
 }
+
+export default Header

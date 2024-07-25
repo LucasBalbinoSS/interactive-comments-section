@@ -1,82 +1,78 @@
 import { useState } from "react";
 
 import "./Comment.css";
+import commentList from "../utils/commentList";
+
 import Reply from "./Reply";
 import Likes from "./Likes";
+import Input from "./Input";
 
-export default function Comment() {
-  const [commentsList, setCommentsList] = useState([
-    {
-      id: 0,
-      url: "../../images/avatars/image-amyrobson.png",
-      alt: "amyrobson's profile photo",
-      user: "amyrobson",
-      date: "1 month ago",
-      content:
-        "Impressive! Though it seems the drag feature could be improved. But overall it looks incledible. You've nailed the design and the responsiveness at various breakpoints works really well.",
-      replies: [],
-    },
-    {
-      id: 1,
-      url: "../../images/avatars/image-maxblagun.png",
-      alt: "maxblagun's profile photo",
-      user: "maxblagun",
-      date: "2 weeks ago",
-      content:
-        "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think i want to dive into React as well soon. Perhaps you can give me an insight on where i can learn React? Thanks!",
-      replies: [
-        {
-          id: 0,
-          url: "../../images/avatars/image-ramsesmiron.png",
-          alt: "ramsesmiron's profile photo",
-          user: "ramsesmiron",
-          date: "1 week ago",
-          content:
-            "@maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
-        },
-      ],
-    },
-  ]);
+const Comment = () => {
+  const [comment, setComment] = useState(commentList)
+
+  const addComment = (newComment) => {
+    if (newComment == '') {
+      return
+    }
+
+    setComment((prevComments) => [
+      ...prevComments,
+      {
+        id: prevComments?.length + 1,
+        url: "../../images/avatars/image-juliusomo.png",
+        alt: "juliusomos's profile photo",
+        user: "lucasbalbs",
+        date: "now",
+        content: newComment,
+        replies: []
+      }
+    ])
+  }
 
   return (
     <>
-      {commentsList.map(function (comment) {
-        return (
-          <li className="comment-container" key={comment.id}>
-            <div className="comment">
-              <div className="information">
-                <img className="photo" src={comment.url} alt={comment.alt} />
-                <span className="user">{comment.user}</span>
-                <span className="date">{comment.date}</span>
+      <ul className="comments-list">
+        {comment.map((comment, index) => {
+          return (
+            <li className="comment-container" key={index}>
+              <div className="comment">
+                <div className="information">
+                  <img className="photo" src={comment.url} alt={comment.alt} />
+                  <span className="user">{comment.user}</span>
+                  <span className="date">{comment.date}</span>
+                </div>
+                <p className="text-content">{comment.content}</p>
+                <div className="comment-interaction">
+                  <Likes />
+                  <button className="button button-reply">
+                    <img src="../../images/icon-reply.svg" alt="Reply symbol" />
+                    <span className="text-reply">Reply</span>
+                  </button>
+                </div>
               </div>
-              <p className="text-content">{comment.content}</p>
-              <div className="comment-interaction">
-                <Likes />
-                <button className="button button-reply">
-                  <img src="../../images/icon-reply.svg" alt="Reply symbol" />
-                  <span className="text-reply">Reply</span>
-                </button>
-              </div>
-            </div>
-            {comment.replies.length > 0 && (
-              <ul className="replies-list">
-                {comment.replies.map(function (reply) {
-                  return (
-                    <Reply
-                      key={reply.id}
-                      url={reply.url}
-                      alt={reply.alt}
-                      user={reply.user}
-                      date={reply.date}
-                      content={reply.content}
-                    />
-                  );
-                })}
-              </ul>
-            )}
-          </li>
-        );
-      })}
+              {comment?.replies?.length > 0 && (
+                <ul className="replies-list">
+                  {comment.replies.map(function (reply, index) {
+                    return (
+                      <Reply
+                        key={index}
+                        url={reply.url}
+                        alt={reply.alt}
+                        user={reply.user}
+                        date={reply.date}
+                        content={reply.content}
+                      />
+                    );
+                  })}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+      <Input addComment={addComment} />
     </>
   );
 }
+
+export default Comment
