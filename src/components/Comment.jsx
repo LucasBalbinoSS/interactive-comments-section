@@ -21,7 +21,8 @@ const Comment = () => {
         id: prevComments?.length + 1,
         url: "../../images/avatars/image-juliusomo.png",
         alt: "juliusomos's profile photo",
-        user: "lucasbalbs",
+        user: "juliusomo",
+        you: true,
         date: "now",
         content: newComment,
         replies: []
@@ -38,7 +39,10 @@ const Comment = () => {
               <div className="comment">
                 <div className="information">
                   <img className="photo" src={comment.url} alt={comment.alt} />
-                  <span className="user">{comment.user}</span>
+                  <div className="user-container">
+                    <span className="user">{comment.user}</span>
+                    {comment?.you && <span className="your-comment-label">you</span>}
+                  </div>
                   <span className="date">{comment.date}</span>
                 </div>
                 <p className="text-content">{comment.content}</p>

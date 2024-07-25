@@ -33,6 +33,12 @@
   height: 25px;
 }
 
+.user-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .user {
   cursor: pointer;
   font-weight: 700;
@@ -40,6 +46,15 @@
 
 .user:hover {
   text-decoration: underline;
+}
+
+.your-comment-label{
+  background-color: var(--blue-500);
+  border-radius: 2px;
+  color: var(--white);
+  font-size: var(--text-xs);
+  padding-block-end: 3px;
+  padding-inline: 8px;
 }
 
 .date {
