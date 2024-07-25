@@ -49,8 +49,8 @@
 
 .text-content {
   color: #78716c;
-  text-wrap: pretty;
   line-height: 1.5;
+  overflow-wrap: break-word;
 }
 
 .comment-interaction {
