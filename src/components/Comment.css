@@ -74,24 +74,25 @@
   justify-content: space-between;
 }
 
+.comment-interaction-internal{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .button {
   background-color: transparent;
   display: flex;
   padding: 12px;
 }
 
-.button-reply {
+.comment-interaction .button {
   align-items: center;
   display: flex;
   gap: 5px;
 }
 
-.button-reply img {
-  object-fit: contain;
-}
-
-.likes-num,
-.text-reply {
+.likes-num {
   color: var(--blue-500);
   font-weight: 700;
 }

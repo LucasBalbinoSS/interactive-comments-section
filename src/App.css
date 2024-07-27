@@ -13,6 +13,10 @@ button {
   transition: opacity 300ms ease;
 }
 
+button img {
+  object-fit: contain;
+}
+
 button:hover {
   opacity: 0.6;
 }

@@ -6,6 +6,9 @@ import commentList from "../utils/commentList";
 import Reply from "./Reply";
 import Likes from "./Likes";
 import Input from "./Input";
+import DeleteButton from "./DeleteButton";
+import EditButton from "./EditButton";
+import ReplyButton from "./ReplyButton";
 
 const Comment = () => {
   const [comment, setComment] = useState(commentList)
@@ -48,10 +51,11 @@ const Comment = () => {
                 <p className="text-content">{comment.content}</p>
                 <div className="comment-interaction">
                   <Likes />
-                  <button className="button button-reply">
-                    <img src="../../images/icon-reply.svg" alt="Reply symbol" />
-                    <span className="text-reply">Reply</span>
-                  </button>
+                  <div className="comment-interaction-internal">
+                    {comment?.you && <DeleteButton removeComment={removeComment} />}
+                    {comment?.you && <EditButton />}
+                    {! comment?.you && <ReplyButton />}
+                  </div>
                 </div>
               </div>
               {comment?.replies?.length > 0 && (

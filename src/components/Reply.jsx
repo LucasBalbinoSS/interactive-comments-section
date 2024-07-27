@@ -1,4 +1,5 @@
 import Likes from "./Likes";
+import ReplyButton from "./ReplyButton";
 
 const Reply = (props) => {
   return (
@@ -12,10 +13,7 @@ const Reply = (props) => {
         <p className="text-content">{props.content}</p>
         <div className="comment-interaction">
           <Likes />
-          <button className="button button-reply">
-            <img src="../../images/icon-reply.svg" alt="Reply symbol" />
-            <span className="text-reply">Reply</span>
-          </button>
+          <ReplyButton />
         </div>
       </div>
     </li>

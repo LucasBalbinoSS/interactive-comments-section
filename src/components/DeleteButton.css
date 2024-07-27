@@ -1,0 +1,8 @@
+.button-delete:focus {
+  outline: 1px solid var(--red-100);
+}
+
+.text-delete {
+    color: var(--red-500);
+    font-weight: 700;
+}
