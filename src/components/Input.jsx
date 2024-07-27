@@ -23,14 +23,12 @@ const Input = ({ addComment }) => {
         value={comment}
         onChange={handleTextAreaChange}
       ></textarea>
-      <div className="input-internal">
-        <img
-          className="photo"
-          src="../../images/avatars/image-juliusomo.png"
-          alt="juliusomo's profile photo"
-        />
-        <button onClick={handleAddComment} className="send-button js-send-button">Send</button>
-      </div>
+      <img
+        className="photo"
+        src="../../images/avatars/image-juliusomo.png"
+        alt="juliusomo's profile photo"
+      />
+      <button onClick={handleAddComment} className="send-button js-send-button">Send</button>
     </div>
   );
 }

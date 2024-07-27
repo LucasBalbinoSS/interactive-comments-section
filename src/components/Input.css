@@ -13,14 +13,19 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .input {
+  align-items: center;
   background-color: var(--white);
   border: 1px solid var(--gray-100);
   border-radius: 10px;
+  bottom: 10px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-block-start: 20px;
   padding: 15px;
   position: sticky;
-  bottom: 10px;
+  row-gap: 10px;
 }
 
 .input-field {
@@ -28,7 +33,7 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 5px;
   color: #78716c;
   font-size: var(--text-sm);
-  margin-block-end: 10px;
+  min-height: 90px;
   padding-inline: 15px;
   padding-block: 10px;
   transition: border-color 200ms ease;
@@ -40,19 +45,13 @@ textarea::-webkit-scrollbar-thumb {
   border-color: var(--gray-300);
 }
 
-.input-internal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .send-button {
   background-color: var(--blue-500);
   border-radius: 5px;
   color: var(--white);
   font-weight: 600;
   letter-spacing: 1px;
-  text-transform: uppercase;
   padding-block: 10px;
   padding-inline: 24px;
+  text-transform: uppercase;
 }
