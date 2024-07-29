@@ -52,7 +52,7 @@ const Comment = () => {
                 <div className="comment-interaction">
                   <Likes />
                   <div className="comment-interaction-internal">
-                    {comment?.you && <DeleteButton removeComment={removeComment} />}
+                    {comment?.you && <DeleteButton />}
                     {comment?.you && <EditButton />}
                     {! comment?.you && <ReplyButton />}
                   </div>

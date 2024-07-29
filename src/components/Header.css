@@ -12,3 +12,12 @@ header {
   font-size: var(--text-xl);
   color: var(--blue-900);
 }
+
+
+
+/* tablet & desktop */
+@media (min-width: 700px) {
+  .logo {
+    font-size: var(--text-2xl);
+  }
+}

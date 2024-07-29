@@ -24,3 +24,12 @@ button:hover {
 button:focus {
   outline: 1px solid #5473b6;
 }
+
+
+
+/* tablet & desktop */
+@media (min-width: 700px) {
+  button {
+    font-size: var(--text-base);
+  }
+}

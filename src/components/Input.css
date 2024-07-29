@@ -55,3 +55,29 @@ textarea::-webkit-scrollbar-thumb {
   padding-inline: 24px;
   text-transform: uppercase;
 }
+
+
+
+/* tablet & desktop */
+@media (min-width: 700px) {
+  .input {
+    align-items: flex-start;
+    column-gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .input img {
+    order: -1;
+    height: 35px;
+  }
+
+  .input-field {
+    font-size: var(--text-base);
+    min-height: 70px;
+  }
+
+  .send-button {
+    padding-block: 12px;
+    padding-inline: 29px;
+  }
+}
