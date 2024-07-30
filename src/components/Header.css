@@ -5,6 +5,7 @@ header {
   padding-block: 12px;
   position: fixed;
   inset: 0 0 auto 0;
+  z-index: 1;
 }
 
 .logo {
@@ -19,5 +20,11 @@ header {
 @media (min-width: 700px) {
   .logo {
     font-size: var(--text-2xl);
+  }
+}
+
+@media (min-width: 900px) {
+  .logo {
+    font-size: var(--text-3xl);
   }
 }

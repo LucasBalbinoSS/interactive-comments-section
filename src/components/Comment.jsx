@@ -40,18 +40,27 @@ const Comment = () => {
           return (
             <li className="comment-container" key={index}>
               <div className="comment">
-                <div className="information">
-                  <img className="photo" src={comment.url} alt={comment.alt} />
-                  <div className="user-container">
-                    <span className="user">{comment.user}</span>
-                    {comment?.you && <span className="your-comment-label">you</span>}
+                <div className="comment-internal">
+                  <div className="information">
+                    <div className="information-internal">
+                      <img className="photo" src={comment.url} alt={comment.alt} />
+                      <div className="user-container">
+                        <span className="user">{comment.user}</span>
+                        {comment?.you && <span className="your-comment-label">you</span>}
+                      </div>
+                      <span className="date">{comment.date}</span>
+                    </div>
+                    <div className="comment-interaction-internal">
+                      {comment?.you && <DeleteButton />}
+                      {comment?.you && <EditButton />}
+                      {! comment?.you && <ReplyButton />}
+                    </div>
                   </div>
-                  <span className="date">{comment.date}</span>
+                  <p className="text-content">{comment.content}</p>
                 </div>
-                <p className="text-content">{comment.content}</p>
                 <div className="comment-interaction">
                   <Likes />
-                  <div className="comment-interaction-internal">
+                  <div className="comment-interaction-internal-mobile">
                     {comment?.you && <DeleteButton />}
                     {comment?.you && <EditButton />}
                     {! comment?.you && <ReplyButton />}
