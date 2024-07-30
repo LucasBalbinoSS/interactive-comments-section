@@ -34,6 +34,14 @@ const Comment = () => {
     ])
   }
 
+  const deleteComment = (index) => {
+    const newCommentList = commentList.filter((commentIndex) => {
+      return commentIndex !== index
+    })
+
+    setComment(newCommentList)
+  }
+
   return (
     <>
       <ul className="comments-list">
@@ -52,7 +60,7 @@ const Comment = () => {
                       <span className="date">{comment.date}</span>
                     </div>
                     <div className="comment-interaction-internal">
-                      {comment?.you && <DeleteButton />}
+                      {comment?.you && <DeleteButton deleteComment={deleteComment} />}
                       {comment?.you && <EditButton />}
                       {! comment?.you && <ReplyButton />}
                     </div>
@@ -62,7 +70,7 @@ const Comment = () => {
                 <div className="comment-interaction">
                   <Likes numLikes={comment.likes} />
                   <div className="comment-interaction-internal-mobile">
-                    {comment?.you && <DeleteButton />}
+                    {comment?.you && <DeleteButton index={index} />}
                     {comment?.you && <EditButton />}
                     {! comment?.you && <ReplyButton />}
                   </div>
