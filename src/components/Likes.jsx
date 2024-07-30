@@ -2,18 +2,16 @@ import { useState } from "react";
 
 import "./Likes.css";
 
-const Likes = () => {
-  const [likes, setLikes] = useState(function () {
-    return 0;
-  });
+const Likes = ({ numLikes }) => {
+  const [likes, setLikes] = useState(numLikes);
 
   function handleLike() {
-    setLikes((prevLikes) => prevLikes + 1);
+    setLikes((numLikes) => numLikes + 1);
   }
 
   function handleDislike() {
     if (likes > 0) {
-      setLikes((prevLikes) => prevLikes - 1);
+      setLikes((numLikes) => numLikes - 1);
     }
   }
 

@@ -21,7 +21,7 @@ const Reply = (props) => {
           <p className="text-content">{props.content}</p>
         </div>
         <div className="comment-interaction">
-          <Likes />
+          <Likes numLikes={props.numLikes} />
           <div className="comment-interaction-internal-mobile">
             <ReplyButton />
           </div>

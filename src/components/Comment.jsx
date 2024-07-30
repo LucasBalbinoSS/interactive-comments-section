@@ -28,6 +28,7 @@ const Comment = () => {
         you: true,
         date: "now",
         content: newComment,
+        likes: 0,
         replies: []
       }
     ])
@@ -59,7 +60,7 @@ const Comment = () => {
                   <p className="text-content">{comment.content}</p>
                 </div>
                 <div className="comment-interaction">
-                  <Likes />
+                  <Likes numLikes={comment.likes} />
                   <div className="comment-interaction-internal-mobile">
                     {comment?.you && <DeleteButton />}
                     {comment?.you && <EditButton />}
@@ -78,6 +79,7 @@ const Comment = () => {
                         user={reply.user}
                         date={reply.date}
                         content={reply.content}
+                        numLikes={reply.likes}
                       />
                     );
                   })}
