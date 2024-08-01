@@ -89,6 +89,6 @@ textarea::-webkit-scrollbar-thumb {
   }
 
   .input-field {
-    min-height: 80px;
+    min-height: 110px;
   }
 }
