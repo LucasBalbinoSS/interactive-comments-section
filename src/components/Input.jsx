@@ -2,15 +2,15 @@ import { useState } from "react";
 import "./Input.css";
 
 const Input = ({ addComment }) => {
-  const [comment, setComment] = useState('')
+  const [comment, setComments] = useState('')
 
   const handleTextAreaChange = (e) => {
-    setComment(e.target.value)
+    setComments(e.target.value)
   }
 
   const handleAddComment = () => {
     addComment(comment)
-    setComment('')
+    setComments('')
   }
 
   return (

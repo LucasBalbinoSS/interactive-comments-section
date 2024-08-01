@@ -11,14 +11,14 @@ import EditButton from "./EditButton";
 import ReplyButton from "./ReplyButton";
 
 const Comment = () => {
-  const [comment, setComment] = useState(commentList)
+  const [comments, setComments] = useState(commentList)
 
   const addComment = (newComment) => {
     if (newComment == '') {
       return
     }
 
-    setComment((prevComments) => [
+    setComments((prevComments) => [
       ...prevComments,
       {
         id: prevComments?.length + 1,
@@ -35,17 +35,17 @@ const Comment = () => {
   }
 
   const deleteComment = (index) => {
-    const newCommentList = commentList.filter((commentIndex) => {
+    const newCommentList = comments.filter((comment, commentIndex) => {
       return commentIndex !== index
     })
 
-    setComment(newCommentList)
+    setComments(newCommentList)
   }
 
   return (
     <>
       <ul className="comments-list">
-        {comment.map((comment, commentIndex) => {
+        {comments.map((comment, commentIndex) => {
           return (
             <li className="comment-container" key={commentIndex}>
               <div className="comment">
