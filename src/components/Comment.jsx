@@ -45,9 +45,9 @@ const Comment = () => {
   return (
     <>
       <ul className="comments-list">
-        {comment.map((comment, index) => {
+        {comment.map((comment, commentIndex) => {
           return (
-            <li className="comment-container" key={index}>
+            <li className="comment-container" key={commentIndex}>
               <div className="comment">
                 <div className="comment-internal">
                   <div className="information">
@@ -55,12 +55,13 @@ const Comment = () => {
                       <img className="photo" src={comment.url} alt={comment.alt} />
                       <div className="user-container">
                         <span className="user">{comment.user}</span>
+                        <span className="user">{commentIndex}</span>
                         {comment?.you && <span className="your-comment-label">you</span>}
                       </div>
                       <span className="date">{comment.date}</span>
                     </div>
                     <div className="comment-interaction-internal">
-                      {comment?.you && <DeleteButton deleteComment={deleteComment} />}
+                      {comment?.you && <DeleteButton deleteComment={deleteComment}/>}
                       {comment?.you && <EditButton />}
                       {! comment?.you && <ReplyButton />}
                     </div>
@@ -70,7 +71,7 @@ const Comment = () => {
                 <div className="comment-interaction">
                   <Likes numLikes={comment.likes} />
                   <div className="comment-interaction-internal-mobile">
-                    {comment?.you && <DeleteButton index={index} />}
+                    {comment?.you && <DeleteButton deleteComment={deleteComment}/>}
                     {comment?.you && <EditButton />}
                     {! comment?.you && <ReplyButton />}
                   </div>
@@ -78,10 +79,10 @@ const Comment = () => {
               </div>
               {comment?.replies?.length > 0 && (
                 <ul className="replies-list">
-                  {comment.replies.map(function (reply, index) {
+                  {comment.replies.map(function (reply, replyIndex) {
                     return (
                       <Reply
-                        key={index}
+                        key={replyIndex}
                         url={reply.url}
                         alt={reply.alt}
                         user={reply.user}
