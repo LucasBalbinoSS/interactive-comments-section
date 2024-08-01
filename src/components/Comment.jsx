@@ -55,7 +55,6 @@ const Comment = () => {
                       <img className="photo" src={comment.url} alt={comment.alt} />
                       <div className="user-container">
                         <span className="user">{comment.user}</span>
-                        <span className="user">{commentIndex}</span>
                         {comment?.you && <span className="your-comment-label">you</span>}
                       </div>
                       <span className="date">{comment.date}</span>
