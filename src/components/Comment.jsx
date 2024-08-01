@@ -61,7 +61,7 @@ const Comment = () => {
                       <span className="date">{comment.date}</span>
                     </div>
                     <div className="comment-interaction-internal">
-                      {comment?.you && <DeleteButton deleteComment={deleteComment}/>}
+                      {comment?.you && <DeleteButton deleteComment={deleteComment} index={commentIndex}/>}
                       {comment?.you && <EditButton />}
                       {! comment?.you && <ReplyButton />}
                     </div>
@@ -71,7 +71,7 @@ const Comment = () => {
                 <div className="comment-interaction">
                   <Likes numLikes={comment.likes} />
                   <div className="comment-interaction-internal-mobile">
-                    {comment?.you && <DeleteButton deleteComment={deleteComment}/>}
+                    {comment?.you && <DeleteButton deleteComment={deleteComment} index={commentIndex}/>}
                     {comment?.you && <EditButton />}
                     {! comment?.you && <ReplyButton />}
                   </div>
