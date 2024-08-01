@@ -12,6 +12,7 @@ import ReplyButton from "./ReplyButton";
 
 const Comment = () => {
   const [comments, setComments] = useState(commentList)
+  const [commentValue, setCommentValue] = useState('')
 
   const addComment = (newComment) => {
     if (newComment == '') {
@@ -34,12 +35,24 @@ const Comment = () => {
     ])
   }
 
+  const handleAddComment = () => {
+    addComment(commentValue)
+    setCommentValue('')
+  }
+
   const deleteComment = (index) => {
     const newCommentList = comments.filter((comment, commentIndex) => {
       return commentIndex !== index
     })
 
     setComments(newCommentList)
+  }
+
+  const editComment = (index) => {
+    const valueToBeEdited = comments[index].content
+
+    setCommentValue(valueToBeEdited)
+    deleteComment(index)
   }
 
   return (
@@ -61,7 +74,7 @@ const Comment = () => {
                     </div>
                     <div className="comment-interaction-internal">
                       {comment?.you && <DeleteButton deleteComment={deleteComment} index={commentIndex}/>}
-                      {comment?.you && <EditButton />}
+                      {comment?.you && <EditButton editComment={editComment} index={commentIndex} />}
                       {! comment?.you && <ReplyButton />}
                     </div>
                   </div>
@@ -71,7 +84,7 @@ const Comment = () => {
                   <Likes numLikes={comment.likes} />
                   <div className="comment-interaction-internal-mobile">
                     {comment?.you && <DeleteButton deleteComment={deleteComment} index={commentIndex}/>}
-                    {comment?.you && <EditButton />}
+                    {comment?.you && <EditButton editComment={editComment} index={commentIndex} />}
                     {! comment?.you && <ReplyButton />}
                   </div>
                 </div>
@@ -97,7 +110,13 @@ const Comment = () => {
           );
         })}
       </ul>
-      <Input addComment={addComment} />
+      <Input
+      handleAddComment={handleAddComment}
+      editComment={editComment}
+      commentValue={commentValue}
+      setCommentValue={setCommentValue}
+      addComment={addComment}
+      />
     </>
   );
 }

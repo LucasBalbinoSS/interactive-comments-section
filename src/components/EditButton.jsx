@@ -1,8 +1,12 @@
 import "./EditButton.css"
 
-const EditButton = () => {
+const EditButton = (props) => {
+  const { editComment, index } = props
+
     return (
-      <button className="button button-edit">
+      <button onClick={() => {
+        editComment(index)
+      }} className="button button-edit">
         <img src="../../images/icon-edit.svg" alt="Edit symbol" />
         <span className="text-edit">Edit</span>
       </button>

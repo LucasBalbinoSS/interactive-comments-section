@@ -1,18 +1,6 @@
-import { useState } from "react";
 import "./Input.css";
 
-const Input = ({ addComment }) => {
-  const [comment, setComments] = useState('')
-
-  const handleTextAreaChange = (e) => {
-    setComments(e.target.value)
-  }
-
-  const handleAddComment = () => {
-    addComment(comment)
-    setComments('')
-  }
-
+const Input = ({ handleAddComment, commentValue, setCommentValue }) => {
   return (
     <div className="input">
       <textarea
@@ -20,8 +8,10 @@ const Input = ({ addComment }) => {
         name="input"
         id="input"
         placeholder="Add a comment.."
-        value={comment}
-        onChange={handleTextAreaChange}
+        value={commentValue}
+        onChange={(e) => {
+          setCommentValue(e.target.value)
+        }}
       ></textarea>
       <img
         className="photo"
