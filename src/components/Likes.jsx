@@ -6,12 +6,12 @@ const Likes = ({ numLikes }) => {
   const [likes, setLikes] = useState(numLikes);
 
   function handleLike() {
-    setLikes((numLikes) => numLikes + 1);
+    setLikes(likes + 1);
   }
 
   function handleDislike() {
     if (likes > 0) {
-      setLikes((numLikes) => numLikes - 1);
+      setLikes(likes  - 1);
     }
   }
 
