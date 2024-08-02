@@ -1,6 +1,6 @@
 const commentList = [
     {
-      url: "../../images/avatars/image-amyrobson.png",
+      url: "/images/avatars/image-amyrobson.png",
       alt: "amyrobson's profile photo",
       user: "amyrobson",
       you: false,
@@ -10,7 +10,7 @@ const commentList = [
       likes: 41,
       replies: [
         {
-          url: "../../images/avatars/image-ramsesmiron.png",
+          url: "/images/avatars/image-ramsesmiron.png",
           alt: "ramsesmiron's profile photo",
           user: "ramsesmiron",
           you: false,
@@ -22,7 +22,7 @@ const commentList = [
       ],
     },
     {
-      url: "../../images/avatars/image-maxblagun.png",
+      url: "/images/avatars/image-maxblagun.png",
       alt: "maxblagun's profile photo",
       user: "maxblagun",
       you: false,
@@ -32,7 +32,7 @@ const commentList = [
       likes: 13,
       replies: [
         {
-          url: "../../images/avatars/image-ramsesmiron.png",
+          url: "/images/avatars/image-ramsesmiron.png",
           alt: "ramsesmiron's profile photo",
           user: "ramsesmiron",
           you: false,
@@ -42,7 +42,7 @@ const commentList = [
           likes: 0,
         },
         {
-          url: "../../images/avatars/image-ramsesmiron.png",
+          url: "/images/avatars/image-ramsesmiron.png",
           alt: "ramsesmiron's profile photo",
           user: "ramsesmiron",
           you: false,
