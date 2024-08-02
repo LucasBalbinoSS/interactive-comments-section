@@ -23,7 +23,7 @@ const Comment = () => {
       ...prevComments,
       {
         id: prevComments?.length + 1,
-        url: "../../images/avatars/image-juliusomo.png",
+        url: "/images/avatars/image-juliusomo.png",
         alt: "juliusomos's profile photo",
         user: "juliusomo",
         you: true,

@@ -7,7 +7,7 @@ const DeleteButton = (props) => {
     <button onClick={() => {
       deleteComment(index)
     }} className="button button-delete">
-      <img src="../../images/icon-delete.svg" alt="Delete symbol" />
+      <img src="images/icon-delete.svg" alt="Delete symbol" />
       <span className="text-delete">Delete</span>
     </button>
   )

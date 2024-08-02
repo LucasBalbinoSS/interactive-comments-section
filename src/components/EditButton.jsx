@@ -7,7 +7,7 @@ const EditButton = (props) => {
       <button onClick={() => {
         editComment(index)
       }} className="button button-edit">
-        <img src="../../images/icon-edit.svg" alt="Edit symbol" />
+        <img src="images/icon-edit.svg" alt="Edit symbol" />
         <span className="text-edit">Edit</span>
       </button>
     )
