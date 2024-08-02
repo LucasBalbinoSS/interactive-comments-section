@@ -16,17 +16,7 @@ const commentList = [
           you: false,
           date: "1 week ago",
           content:
-            "@maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
-          likes: 0,
-        },
-        {
-          url: "../../images/avatars/image-ramsesmiron.png",
-          alt: "ramsesmiron's profile photo",
-          user: "ramsesmiron",
-          you: false,
-          date: "1 week ago",
-          content:
-            "@maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
+            "@amyrobson thanks for the feedback! I appreciate you pointing out the drag feature. We're actually working on improving it and hope to have an update soon. Glad you like the design and responsiveness!",
           likes: 0,
         },
       ],
@@ -48,7 +38,7 @@ const commentList = [
           you: false,
           date: "1 week ago",
           content:
-            "@maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
+            "@maxblagun thanks a lot! I've been coding for about 3 years now, but I've only been diving deep into React for the past year. It's a fantastic library! It's been a steep learning curve, but the flexibility and component-based architecture have made it a joy to work with.",
           likes: 0,
         },
         {

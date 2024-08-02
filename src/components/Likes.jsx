@@ -11,7 +11,7 @@ const Likes = ({ numLikes }) => {
 
   function handleDislike() {
     if (likes > 0) {
-      setLikes(likes  - 1);
+      setLikes(likes - 1);
     }
   }
 
