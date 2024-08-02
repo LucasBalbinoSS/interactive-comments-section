@@ -1,4 +1,4 @@
-# Interactive comments (React)
+# Interactive comments (React.js)
 👉 [Click here to see the project]() <br>
  The interactive comments page is a **React.js** training project. 📚
 
