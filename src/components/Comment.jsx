@@ -23,7 +23,7 @@ const Comment = () => {
       ...prevComments,
       {
         id: prevComments?.length + 1,
-        url: "/images/avatars/image-juliusomo.png",
+        url: "../images/avatars/image-juliusomo.png",
         alt: "juliusomos's profile photo",
         user: "juliusomo",
         you: true,
@@ -75,7 +75,7 @@ const Comment = () => {
                     <div className="comment-interaction-internal">
                       {comment?.you && <DeleteButton deleteComment={deleteComment} index={commentIndex}/>}
                       {comment?.you && <EditButton editComment={editComment} index={commentIndex} />}
-                      {! comment?.you && <ReplyButton />}
+                      {! comment?.you && <ReplyButton index={commentIndex} />}
                     </div>
                   </div>
                   <p className="text-content">{comment.content}</p>
@@ -85,16 +85,17 @@ const Comment = () => {
                   <div className="comment-interaction-internal-mobile">
                     {comment?.you && <DeleteButton deleteComment={deleteComment} index={commentIndex}/>}
                     {comment?.you && <EditButton editComment={editComment} index={commentIndex} />}
-                    {! comment?.you && <ReplyButton />}
+                    {! comment?.you && <ReplyButton index={commentIndex} />}
                   </div>
                 </div>
               </div>
               {comment?.replies?.length > 0 && (
                 <ul className="replies-list">
-                  {comment.replies.map(function (reply, replyIndex) {
+                  {comment.replies.map((reply, replyIndex) => {
                     return (
                       <Reply
                         key={replyIndex}
+                        index={replyIndex}
                         url={reply.url}
                         alt={reply.alt}
                         user={reply.user}

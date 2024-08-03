@@ -3,7 +3,7 @@ import ReplyButton from "./ReplyButton";
 
 const Reply = (props) => {
   return (
-    <li className="comment-container" key={props.id}>
+    <li className="comment-container">
       <div className="comment">
         <div className="comment-internal">
           <div className="information">
@@ -15,7 +15,7 @@ const Reply = (props) => {
             <div className="comment-interaction-internal">
               {props?.you && <DeleteButton />}
               {props?.you && <EditButton />}
-              {! props?.you && <ReplyButton />}
+              {! props?.you && <ReplyButton index={props.replyIndex} />}
             </div>
           </div>
           <p className="text-content">{props.content}</p>
