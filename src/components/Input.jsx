@@ -2,7 +2,7 @@ import "./Input.css";
 
 const Input = ({ handleAddComment, commentValue, setCommentValue }) => {
   return (
-    <div className="input">
+    <form className="input">
       <textarea
         className="input-field"
         name="input"
@@ -19,7 +19,7 @@ const Input = ({ handleAddComment, commentValue, setCommentValue }) => {
         alt="juliusomo's profile photo"
       />
       <button onClick={handleAddComment} className="send-button js-send-button">Send</button>
-    </div>
+    </form>
   );
 }
 
