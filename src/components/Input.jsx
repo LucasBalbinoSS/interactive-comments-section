@@ -18,7 +18,7 @@ const Input = ({ handleAddComment, commentValue, setCommentValue }) => {
         src="../images/avatars/image-juliusomo.png"
         alt="juliusomo's profile photo"
       />
-      <button onClick={handleAddComment} className="send-button js-send-button">Send</button>
+      <button disabled={!commentValue} onClick={handleAddComment} className="send-button js-send-button">Send</button>
     </form>
   );
 }
