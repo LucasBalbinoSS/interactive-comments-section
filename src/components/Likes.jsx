@@ -17,11 +17,11 @@ const Likes = ({ numLikes }) => {
 
   return (
     <div className="likes">
-      <button className="button button-like" onClick={handleLike}>
+      <button className="comment-button button-like" onClick={handleLike}>
         <img src="../images/icon-plus.svg" alt="Plus icon" />
       </button>
       <span className="likes-num">{likes}</span>
-      <button className="button button-minus" onClick={handleDislike}>
+      <button className="comment-button button-minus" onClick={handleDislike}>
         <img src="../images/icon-minus.svg" alt="Plus icon" />
       </button>
     </div>

@@ -86,7 +86,7 @@
   gap: 5px;
 }
 
-.button {
+.comment-button {
   background-color: transparent;
   display: flex;
   padding: 12px;
@@ -96,8 +96,8 @@
   display: none;
 }
 
-.comment-interaction-internal-mobile .button,
-.comment-interaction-internal .button {
+.comment-interaction-internal-mobile .comment-button,
+.comment-interaction-internal .comment-button {
   align-items: center;
   display: flex;
   gap: 5px;
